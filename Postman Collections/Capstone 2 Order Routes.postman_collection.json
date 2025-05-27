@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "1c545a47-bd06-4a94-9377-d5a35f402cb1",
+		"name": "Capstone 2 Order Routes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40000521"
+	},
+	"item": [
+		{
+			"name": "/checkout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTIwYTM2MWY5YTQ3MGIzMzRkMTM4NyIsImVtYWlsIjoibHVpc0BlbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3Mzc5NDA0MTR9.o7gz3UubB4EHOZvJ34Xc0o1u1bhEEMys5uBO1kpWMxI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-3-129-204-74.us-east-2.compute.amazonaws.com/b5/orders/checkout",
+					"protocol": "http",
+					"host": [
+						"ec2-3-129-204-74",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"b5",
+						"orders",
+						"checkout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/my-orders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTIwYTM2MWY5YTQ3MGIzMzRkMTM4NyIsImVtYWlsIjoibHVpc0BlbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3Mzc5NDA0MTR9.o7gz3UubB4EHOZvJ34Xc0o1u1bhEEMys5uBO1kpWMxI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-3-129-204-74.us-east-2.compute.amazonaws.com/b5/orders/my-orders",
+					"protocol": "http",
+					"host": [
+						"ec2-3-129-204-74",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"b5",
+						"orders",
+						"my-orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/all-orders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTIwYTM2MWY5YTQ3MGIzMzRkMTM4NyIsImVtYWlsIjoibHVpc0BlbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3Mzc5NDA0MTR9.o7gz3UubB4EHOZvJ34Xc0o1u1bhEEMys5uBO1kpWMxI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-3-129-204-74.us-east-2.compute.amazonaws.com/b5/orders/all-orders",
+					"protocol": "http",
+					"host": [
+						"ec2-3-129-204-74",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"b5",
+						"orders",
+						"all-orders"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

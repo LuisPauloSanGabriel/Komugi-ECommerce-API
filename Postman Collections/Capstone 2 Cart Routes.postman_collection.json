@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "614153c6-9aaa-4dbc-bdc4-a7794b73d6d5",
+		"name": "Capstone 2 Cart Routes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40000521"
+	},
+	"item": [
+		{
+			"name": "/get-cart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTMzNDc1M2I4ZmZhZjM0N2RlOTQ0ZiIsImVtYWlsIjoibmJhQGVtYWlsLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3Mzc3MDg0NzV9.sCWT9FZC4M4rls0dzBnXjNReU50BZjQrXLYe-hBC42o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-3-129-204-74.us-east-2.compute.amazonaws.com/b5/cart/get-cart",
+					"protocol": "http",
+					"host": [
+						"ec2-3-129-204-74",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"b5",
+						"cart",
+						"get-cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/add-to-cart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTIwYTM2MWY5YTQ3MGIzMzRkMTM4NyIsImVtYWlsIjoibHVpc0BlbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3Mzc3MDIwNDR9.V8eEfQAZZnZ1cucEQvlVRjTfvSn76ug3bXswDfjHIU4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cartItems\": [{\r\n        \"productId\": \"6792fc18ea640d34d6fa03a5\",\r\n        \"quantity\": 1,\r\n        \"subtotal\": 24000\r\n    }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/cart/add-to-cart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"cart",
+						"add-to-cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/update-cart-quantity",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTMzNDc1M2I4ZmZhZjM0N2RlOTQ0ZiIsImVtYWlsIjoibmJhQGVtYWlsLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3Mzc3MDg0NzV9.sCWT9FZC4M4rls0dzBnXjNReU50BZjQrXLYe-hBC42o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\": \"6792fc18ea640d34d6fa03a5\",\r\n    \"quantity\": 2,\r\n    \"subtotal\": 48000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-3-129-204-74.us-east-2.compute.amazonaws.com/b5/cart/update-cart-quantity",
+					"protocol": "http",
+					"host": [
+						"ec2-3-129-204-74",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"b5",
+						"cart",
+						"update-cart-quantity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/remove-from-cart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTIwYTM2MWY5YTQ3MGIzMzRkMTM4NyIsImVtYWlsIjoibHVpc0BlbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3Mzc4OTY1MjZ9.Tq6W_Rb3TDozn9OjqNxRkCr30b_wEYXSVIYvLaWnojk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-3-129-204-74.us-east-2.compute.amazonaws.com/b5/cart/6792fb35b33a28fbbf70b44e/remove-from-cart",
+					"protocol": "http",
+					"host": [
+						"ec2-3-129-204-74",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"b5",
+						"cart",
+						"6792fb35b33a28fbbf70b44e",
+						"remove-from-cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/clear-cart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTIwYTM2MWY5YTQ3MGIzMzRkMTM4NyIsImVtYWlsIjoibHVpc0BlbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3Mzc4OTY1MjZ9.Tq6W_Rb3TDozn9OjqNxRkCr30b_wEYXSVIYvLaWnojk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-3-129-204-74.us-east-2.compute.amazonaws.com/b5/cart/clear-cart",
+					"protocol": "http",
+					"host": [
+						"ec2-3-129-204-74",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"b5",
+						"cart",
+						"clear-cart"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

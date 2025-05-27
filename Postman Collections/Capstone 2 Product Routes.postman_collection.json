@@ -1,0 +1,257 @@
+{
+	"info": {
+		"_postman_id": "88b28875-353f-42ce-92cb-821de424bfd5",
+		"name": "Capstone 2 Product Routes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40000521"
+	},
+	"item": [
+		{
+			"name": "/Create product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTIwYTM2MWY5YTQ3MGIzMzRkMTM4NyIsImVtYWlsIjoibHVpc0BlbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3Mzc2ODUyOTh9._gAzwQeZbmytM4rrKiCfZ23zOuM2z34wnmhJFsKzrNc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Acer\",\r\n    \"description\": \"Your Acer latop\",\r\n    \"price\": 30000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-3-129-204-74.us-east-2.compute.amazonaws.com/b5/products/",
+					"protocol": "http",
+					"host": [
+						"ec2-3-129-204-74",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"b5",
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/activate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTIwYTM2MWY5YTQ3MGIzMzRkMTM4NyIsImVtYWlsIjoibHVpc0BlbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3Mzc2ODUyOTh9._gAzwQeZbmytM4rrKiCfZ23zOuM2z34wnmhJFsKzrNc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-3-129-204-74.us-east-2.compute.amazonaws.com/b5/products/6792fb35b33a28fbbf70b44e/activate",
+					"protocol": "http",
+					"host": [
+						"ec2-3-129-204-74",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"b5",
+						"products",
+						"6792fb35b33a28fbbf70b44e",
+						"activate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/archive",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTIwYTM2MWY5YTQ3MGIzMzRkMTM4NyIsImVtYWlsIjoibHVpc0BlbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3Mzc2ODUyOTh9._gAzwQeZbmytM4rrKiCfZ23zOuM2z34wnmhJFsKzrNc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-3-129-204-74.us-east-2.compute.amazonaws.com/b5/products/6792fb35b33a28fbbf70b44e/archive",
+					"protocol": "http",
+					"host": [
+						"ec2-3-129-204-74",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"b5",
+						"products",
+						"6792fb35b33a28fbbf70b44e",
+						"archive"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTIwYTM2MWY5YTQ3MGIzMzRkMTM4NyIsImVtYWlsIjoibHVpc0BlbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3Mzc2ODUyOTh9._gAzwQeZbmytM4rrKiCfZ23zOuM2z34wnmhJFsKzrNc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"Is better than acer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-3-129-204-74.us-east-2.compute.amazonaws.com/b5/products/6792fc18ea640d34d6fa03a5/update",
+					"protocol": "http",
+					"host": [
+						"ec2-3-129-204-74",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"b5",
+						"products",
+						"6792fc18ea640d34d6fa03a5",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/products/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-3-129-204-74.us-east-2.compute.amazonaws.com/b5/products/6792fc18ea640d34d6fa03a5",
+					"protocol": "http",
+					"host": [
+						"ec2-3-129-204-74",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"b5",
+						"products",
+						"6792fc18ea640d34d6fa03a5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/search-by-name",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Acer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-3-129-204-74.us-east-2.compute.amazonaws.com/b5/products/search-by-name",
+					"protocol": "http",
+					"host": [
+						"ec2-3-129-204-74",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"b5",
+						"products",
+						"search-by-name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/search-by-price",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"minPrice\": 100,\r\n    \"maxPrice\": 24000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-3-129-204-74.us-east-2.compute.amazonaws.com/b5/products/search-by-price",
+					"protocol": "http",
+					"host": [
+						"ec2-3-129-204-74",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"b5",
+						"products",
+						"search-by-price"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
