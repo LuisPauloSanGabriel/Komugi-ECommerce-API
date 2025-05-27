@@ -17,7 +17,7 @@ app.use(express.json())
 
 
 const corsOptions = {
-	origin: ['http://localhost:3000', 'http://ec2-3-129-204-74.us-east-2.compute.amazonaws.com/b5', 'http://zuitt-bootcamp-prod-520-8489-sangabriel.s3-website.us-east-1.amazonaws.com'],
+	origin: ['http://localhost:3000', 'http://ec2-3-129-204-74.us-east-2.compute.amazonaws.com/b5', 'http://zuitt-bootcamp-prod-520-8489-sangabriel.s3-website.us-east-1.amazonaws.com', 'https://komugi-e-commerce-frontend.vercel.app'],
 	credentials: true,
 	optionSuccessStatus: 200
 }
