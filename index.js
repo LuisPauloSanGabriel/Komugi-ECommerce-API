@@ -34,7 +34,7 @@ app.use("/b5/cart", cartRoutes)
 app.use("/b5/orders", orderRoutes)
 
 if(require.main === module) {
-	app.listen(process.env.PORT || 3000, () =>{
+	app.listen(process.env.PORT || 3000, '0.0.0.0', () =>{
 		console.log(`API is now online on port ${process.env.PORT || 3000}`)
 	})
 }
