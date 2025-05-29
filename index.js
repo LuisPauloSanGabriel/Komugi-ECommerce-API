@@ -28,10 +28,14 @@ mongoose.connect(process.env.MONGODB_STRING)
 
 mongoose.connection.once('open', () => console.log('Now connected to MongoDB Atlas'))
 
-app.use("/b5/users", userRoutes)
-app.use("/b5/products", productRoutes)
-app.use("/b5/cart", cartRoutes)
-app.use("/b5/orders", orderRoutes)
+app.get("/", (req, res) => {
+  res.send("Komugi E-commerce API is running!");
+});
+
+app.use("/users", userRoutes)
+app.use("/products", productRoutes)
+app.use("/cart", cartRoutes)
+app.use("/orders", orderRoutes)
 
 if(require.main === module) {
 	app.listen(process.env.PORT || 3000, '0.0.0.0', () =>{
